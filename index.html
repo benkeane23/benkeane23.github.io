@@ -48,11 +48,10 @@
     </script>
     
     <style>
-        /* CSS Reset & Variables */
         :root {
-            --primary-color: #0d47a1; /* Deep Blue */
-            --secondary-color: #00796b; /* Teal */
-            --accent-color: #1e88e5; /* Bright Blue */
+            --primary-color: #0d47a1;
+            --secondary-color: #00796b;
+            --accent-color: #1e88e5;
             --text-color: #333;
             --bg-color: #f8f9fa;
             --surface-color: #ffffff;
@@ -60,12 +59,10 @@
             --shadow-color: rgba(0, 0, 0, 0.1);
             --header-height: 70px;
         }
-
         html {
             scroll-behavior: smooth;
             scroll-padding-top: var(--header-height);
         }
-
         body {
             font-family: 'Inter', sans-serif;
             margin: 0;
@@ -74,11 +71,9 @@
             line-height: 1.6;
             transition: background-color 0.3s, color 0.3s;
         }
-
-        /* Dark Mode */
         body.dark-mode {
-            --primary-color: #42a5f5; /* Lighter Blue */
-            --secondary-color: #4db6ac; /* Lighter Teal */
+            --primary-color: #42a5f5;
+            --secondary-color: #4db6ac;
             --accent-color: #64b5f6;
             --text-color: #e0e0e0;
             --bg-color: #121212;
@@ -86,12 +81,9 @@
             --border-color: #424242;
             --shadow-color: rgba(0, 0, 0, 0.3);
         }
-
         *, *::before, *::after {
             box-sizing: border-box;
         }
-
-        /* Accessibility: Skip to Content Link */
         .skip-link {
             position: absolute;
             top: -40px;
@@ -105,32 +97,25 @@
         .skip-link:focus {
             top: 0;
         }
-        
-        /* General Styles */
         .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
         section {
             padding: 60px 0;
         }
-
         section:nth-of-type(even) {
             background-color: var(--surface-color);
         }
-
         h1, h2, h3 {
             margin-top: 0;
             line-height: 1.2;
             font-weight: 700;
         }
-
         h1 { font-size: 2.8rem; }
         h2 { font-size: 2.2rem; margin-bottom: 2rem; text-align: center; color: var(--primary-color); }
         h3 { font-size: 1.5rem; color: var(--secondary-color); }
-
         a {
             color: var(--accent-color);
             text-decoration: none;
@@ -139,8 +124,6 @@
         a:hover, a:focus {
             color: var(--primary-color);
         }
-
-        /* Header & Navigation */
         .main-header {
             background-color: var(--surface-color);
             border-bottom: 1px solid var(--border-color);
@@ -188,14 +171,11 @@
         .main-nav a:hover::after, .main-nav a:focus::after {
             width: 70%;
         }
-
         .nav-tools {
             display: flex;
             align-items: center;
             gap: 15px;
         }
-        
-        /* Hamburger Menu */
         .hamburger {
             display: none;
             cursor: pointer;
@@ -211,8 +191,6 @@
             transition: all 0.3s ease-in-out;
             background-color: var(--text-color);
         }
-
-        /* Dark Mode Toggle */
         .theme-switch {
             background: none;
             border: 1px solid var(--border-color);
@@ -233,8 +211,6 @@
             width: 16px;
             height: 16px;
         }
-
-        /* Hero Section */
         #hero {
             display: flex;
             align-items: center;
@@ -312,15 +288,11 @@
             color: var(--text-color);
             opacity: 0.8;
         }
-
-        /* About Section */
         #about p {
             max-width: 750px;
             margin: 0 auto 1rem auto;
             text-align: center;
         }
-        
-        /* How I Help & Services Section */
         .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -341,8 +313,6 @@
         .service-item h3, .help-item h3 {
             margin-top: 0;
         }
-
-        /* Projects Section */
         .project-card {
             background: var(--surface-color);
             border-radius: 8px;
@@ -393,8 +363,6 @@
             background: var(--accent-color);
             color: #fff;
         }
-
-        /* Publications Section */
         .publication-list {
             list-style: none;
             padding: 0;
@@ -420,8 +388,6 @@
             text-align: center;
             margin-top: 2rem;
         }
-
-        /* Contact Section */
         .contact-container {
             display: flex;
             gap: 2rem;
@@ -467,8 +433,6 @@
             color: var(--text-color);
             opacity: 0.7;
         }
-
-        /* Footer */
         .main-footer {
             background-color: var(--text-color);
             color: var(--bg-color);
@@ -494,8 +458,6 @@
         .copyright {
             font-size: 0.9rem;
         }
-
-        /* Animation on Scroll */
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
@@ -505,12 +467,9 @@
             opacity: 1;
             transform: translateY(0);
         }
-
-        /* Responsive Styles */
         @media (max-width: 768px) {
             h1 { font-size: 2.2rem; }
             h2 { font-size: 1.8rem; }
-            
             .main-nav {
                 position: fixed;
                 top: var(--header-height);
@@ -541,7 +500,6 @@
                 padding: 1.5rem;
                 font-size: 1.2rem;
             }
-            
             .hamburger {
                 display: block;
             }
@@ -554,12 +512,10 @@
             .hamburger.is-active .bar:nth-child(3) {
                 transform: translateY(-8px) rotate(-45deg);
             }
-
             #hero {
                 padding-top: 40px;
                 padding-bottom: 40px;
             }
-
             .cta-buttons {
                 flex-direction: column;
             }
@@ -568,11 +524,9 @@
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-
     <header class="main-header">
         <div class="container header-container">
             <a href="#" class="logo">Benjamin Keane</a>
-            
             <nav class="main-nav" id="main-nav">
                 <ul>
                     <li><a href="#about">About</a></li>
@@ -582,7 +536,6 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-
             <div class="nav-tools">
                 <button class="theme-switch" id="theme-switch" aria-label="Toggle dark mode">
                     <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l1.06 1.06c.39.39 1.02.39 1.41 0s.39-1.02 0-1.41L5.99 4.58zm12.02 12.02c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l1.06 1.06c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41l-1.06-1.06zM17.03 5.99c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.02 0 1.41s1.02.39 1.41 0l1.06-1.06zM7.05 17.03c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.02 0 1.41s1.02.39 1.41 0l1.06-1.06z"/></svg>
@@ -596,7 +549,6 @@
             </div>
         </div>
     </header>
-
     <main id="main-content">
         <section id="hero">
             <div class="container hero-content fade-in">
@@ -605,7 +557,6 @@
                 <h1>Benjamin Keane</h1>
                 <p class="title">Bioinformatician specialising in machine learning</p>
                 <p class="tagline">Translating transcriptomic data into clinical solutions such as prognostic biomarkers in cancer.</p>
-
                 <div class="cta-buttons">
                     <a href="[ADD-YOUR-CALENDLY-URL-HERE]" class="btn btn-primary">Request a Consultation</a>
                     <a href="Benjamin_Keane_CV.pdf" class="btn btn-secondary" download>Download CV</a>
@@ -613,7 +564,6 @@
                 <p class="trust-line">Available for consulting, contract work, and academic collaborations.</p>
             </div>
         </section>
-
         <section id="about">
             <div class="container fade-in">
                 <h2>Bridging Data Science and Drug Discovery</h2>
@@ -621,7 +571,6 @@
                 <p>For academic partners, I offer deep expertise in computational biology and statistical modeling, seeking collaborations that push the boundaries of bioinformatics. I am passionate about open science and contributing to high-impact joint publications and grant proposals.</p>
             </div>
         </section>
-
         <section id="how-i-help" class="fade-in">
             <div class="container">
                 <h2>How I Help Pharma & Startups</h2>
@@ -677,7 +626,6 @@
                 </div>
             </div>
         </section>
-
         <section id="projects" class="fade-in">
             <div class="container">
                 <h2>Projects & Case Studies</h2>
@@ -694,22 +642,170 @@
                         </div>
                         <a href="#" class="project-link" aria-label="View case study for Predictive Model for Patient Stratification">View Case Study</a>
                     </article>
-                    </div>
+                </div>
             </div>
         </section>
-
         <section id="publications" class="fade-in">
             <div class="container">
                 <h2>Selected Publications</h2>
                 <ul class="publication-list">
                     <li class="publication-item">
-                        <strong>Brown, G., Tran, F., ... Keane, B., et al. (2024). A review of machine learning applications in rheumatoid arthritis. <i>Rheumatology Advances in Practice</i>.</strong>
+                        <strong> G., Tran, F., ... Keane, B., et al. (2024). A review of machine learning applications in rheumatoid arthritis. <i>Rheumatology Advances in Practice</i>.</strong>
                         <p class="publication-summary">Contributed to a comprehensive review of machine learning's role in diagnosing, predicting, and treating rheumatoid arthritis.</p>
                         <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12247731/" target="_blank" rel="noopener noreferrer">View on Journal Website (PMC)</a>
                     </li>
-                    </ul>
+                </ul>
                 <div class="view-all-btn">
                     <a href="https://orcid.org/0000-0001-9281-4148" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View Full Publication List on ORCID</a>
                 </div>
             </div>
         </section>
+        <section id="contact" class="fade-in">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Let's Collaborate</h3>
+                        <p>I'm currently accepting new projects. Whether you have a well-defined data challenge or need strategic guidance on leveraging your data, I'm here to help.</p>
+                        <p>The best way to start is by booking a complimentary 30-minute consultation to discuss your needs.</p>
+                        <p>
+                            <strong>Schedule a call:</strong> <a href="[ADD-YOUR-CALENDLY-URL-HERE]">Book on Calendly</a><br>
+                            <strong>Or email me directly:</strong> <a href="mailto:benjaminjameskeane@gmail.com">benjaminjameskeane@gmail.com</a>
+                        </p>
+                    </div>
+                    <div class="contact-form-container">
+                        <h3>Send a Message</h3>
+                        <form id="contact-form" action="[ADD-YOUR-FORMSPREE-URL-HERE]" method="POST" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                        <p id="form-status" role="status"></p>
+                        <p class="privacy-note">Your message is stored only for the purpose of replying. CV downloads and Calendly bookings are handled by third-party providers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://linkedin.com/in/benjamin-keane-1b14b51b0" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="https://github.com/benkeane23" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="https://orcid.org/0000-0001-9281-4148" target="_blank" rel="noopener noreferrer" aria-label="ORCID">
+                    <svg viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.125 6.1h2.25v8.625h-2.25v-8.625zm1.125-2.25c.663 0 1.219.556 1.219 1.219s-.556 1.219-1.219 1.219-1.219-.556-1.219-1.219.556-1.219 1.219-1.219zm3.375 9.375h2.25v2.812h-4.5v-1.125c0-1.875 3.375-2.438 3.375-2.438z"/></svg>
+                </a>
+            </div>
+            <p class="copyright">&copy; 2025 Benjamin Keane. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const nav = document.getElementById('main-nav');
+            hamburger.addEventListener('click', () => {
+                nav.classList.toggle('is-open');
+                const isOpen = nav.classList.contains('is-open');
+                hamburger.setAttribute('aria-expanded', isOpen);
+                hamburger.classList.toggle('is-active', isOpen);
+            });
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (nav.classList.contains('is-open')) {
+                        nav.classList.remove('is-open');
+                        hamburger.setAttribute('aria-expanded', 'false');
+                        hamburger.classList.remove('is-active');
+                    }
+                });
+            });
+            const themeSwitch = document.getElementById('theme-switch');
+            const sunIcon = document.querySelector('.sun-icon');
+            const moonIcon = document.querySelector('.moon-icon');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+            function setTheme(isDark) {
+                if (isDark) {
+                    document.body.classList.add('dark-mode');
+                    sunIcon.style.display = 'block';
+                    moonIcon.style.display = 'none';
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    document.body.classList.remove('dark-mode');
+                    sunIcon.style.display = 'none';
+                    moonIcon.style.display = 'block';
+                    localStorage.setItem('theme', 'light');
+                }
+            }
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                setTheme(savedTheme === 'dark');
+            } else {
+                setTheme(prefersDark.matches);
+            }
+            themeSwitch.addEventListener('click', () => {
+                setTheme(!document.body.classList.contains('dark-mode'));
+            });
+            prefersDark.addEventListener('change', (e) => {
+                if (!localStorage.getItem('theme')) {
+                    setTheme(e.matches);
+                }
+            });
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+            const form = document.getElementById('contact-form');
+            if (form) {
+                async function handleSubmit(event) {
+                    event.preventDefault();
+                    const status = document.getElementById('form-status');
+                    const data = new FormData(event.target);
+                    try {
+                        const response = await fetch(event.target.action, {
+                            method: form.method,
+                            body: data,
+                            headers: { 'Accept': 'application/json' }
+                        });
+                        if (response.ok) {
+                            status.textContent = "Thanks for your submission!";
+                            status.style.color = 'var(--secondary-color)';
+                            form.reset();
+                        } else {
+                            const responseData = await response.json();
+                            if (Object.prototype.hasOwnProperty.call(responseData, 'errors')) {
+                                status.textContent = responseData["errors"].map(error => error["message"]).join(", ");
+                            } else {
+                                status.textContent = "Oops! There was a problem submitting your form.";
+                            }
+                            status.style.color = 'red';
+                        }
+                    } catch (error) {
+                        status.textContent = "Oops! There was a problem submitting your form.";
+                        status.style.color = 'red';
+                    }
+                }
+                form.addEventListener("submit", handleSubmit);
+            }
+        });
+    </script>
+</body>
+</html>
